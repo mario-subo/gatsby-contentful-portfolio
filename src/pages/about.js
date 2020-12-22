@@ -18,7 +18,7 @@ const AboutPage = ({ data }) => (
             </h1>
 
             <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
-              Interdum et malesuada fames ac ante.
+              Interior Architect at Linear Vista.
             </h2>
             <div className="mt-4 leading-loose">
               Curabitur non hendrerit dolor. Interdum et malesuada fames ac ante
@@ -31,15 +31,6 @@ const AboutPage = ({ data }) => (
               Praesent id mi purus. Morbi sem leo, varius ut tempus et, tempor
               sit amet nibh.
               <br />
-              <br />
-              I'm happy to hear from you:
-              <br />
-              <a
-                href="mailto:contact@johndoe.com"
-                className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-600"
-              >
-                contact@johndoe.com
-              </a>
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">

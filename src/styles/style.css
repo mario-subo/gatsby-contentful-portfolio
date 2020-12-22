@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @tailwind base;
 
 body {
-  @apply .bg-white .font-sans .antialiased;
+  @apply .bg-white .font-body .antialiased;
 }
 
 @tailwind components;

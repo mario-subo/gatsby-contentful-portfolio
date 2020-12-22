@@ -15,7 +15,7 @@ module.exports = {
       { name: "About", to: "/about" },
     ],
     links: {
-      facebook: "https://www.facebook.com/davidgituen",
+      facebook: "https://www.facebook.com",
       instagram: "https://www.instagram.com/davidgituen/",
       pinterest: "https://pinterest.com/",
       twitter: "https://twitter.com/",
@@ -23,7 +23,7 @@ module.exports = {
     locale: "en",
     title: `David Gituen Marcus`,
     description: `Interior Achitecture portfolio of David Gituen Marcus`,
-    author: `@mario-subotic`,
+    author: `@mario-subo`,
   },
   plugins: [
     `gatsby-plugin-postcss`,

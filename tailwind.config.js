@@ -7,7 +7,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Inter var", "system-ui", "sans-serif"],
-      body: ["Quicksand"]
+      body: ["Karla", "system-ui", "sans-serif"]
     },
   },
   variants: {

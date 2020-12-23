@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 @tailwind base;
 
 body {
@@ -23,4 +23,8 @@ body {
   .container {
     @apply .px-8;
   }
+}
+
+.bg-custom-stripes {
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 99px, white, white 100px, transparent 101px, transparent 649px, white, white 650px);
 }

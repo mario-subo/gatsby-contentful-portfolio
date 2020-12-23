@@ -20,7 +20,7 @@ const Header = () => {
   `)
 
   return (
-    <div className="pt-6 pb-12 md:pt-12 sticky top-0 z-50 bg-white bg-opacity-75">
+    <div className="pt-6 pb-12 md:pt-12 sticky top-0 z-50 bg-custom-stripes bg-fixed bg-gray-400">
       <div className="container flex justify-between items-center">
        <Link to="/">
           <strong>{`DAVID GITUEN MARCUS` /** TODO: Replace with LOGO */}</strong>

@@ -17,7 +17,7 @@ const AboutPage = ({ data }) => (
               About me
             </h1>
 
-            <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
+            <h2 className="text-xl leading-tight font-semibold tracking-tight text-gray-600 sm:text-2xl">
               Interior Architect at Linear Vista.
             </h2>
             <div className="mt-4 leading-loose">

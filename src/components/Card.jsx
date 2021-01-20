@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
@@ -7,7 +8,11 @@ const Card = props => {
   const { name, slug, summary, thumbnail } = props
 
   return (
-    <div className="bg-white h-full shadow-md overflow-hidden group">
+    <motion.div
+      className="bg-white h-full overflow-hidden group shadow-md hover:shadow-lg"
+      whileHover={{ y: -5 }}
+      whileTap={{ y: 0 }}
+    >
       <Link to={`/${slug}`}>
         <div className="group-hover:opacity-75 transition duration-150 ease-in-out">
           <Img fluid={thumbnail.localFile.childImageSharp.fluid} alt={name} />
@@ -17,7 +22,7 @@ const Card = props => {
           <p className="text-sm sm:text-base text-gray-700">{summary}</p>
         </div>
       </Link>
-    </div>
+    </motion.div>
   )
 }
 

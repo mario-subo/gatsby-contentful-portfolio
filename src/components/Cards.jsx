@@ -4,33 +4,43 @@ import PropTypes from "prop-types"
 import React from "react"
 import Card from "./Card"
 
-const variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 },
+const listContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: .2 }
+  },
+}
+
+const itemVariant = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 }
 }
 
 const Cards = ({ items, hideLastItemOnMobile = false }) => {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={variants}
-      transition={{ duration: .7 }}
+    <div
       className="container"
     >
-      <div className="flex flex-wrap -mx-3 lg:-mx-6">
+      <motion.div
+        className="flex flex-wrap -mx-3 lg:-mx-6"
+        variants={listContainerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {items.map(item => (
-          <div
+          <motion.div
+            key={item.id}
+            variants={itemVariant}
             className={classNames("w-full sm:w-1/2 lg:w-1/3 p-3 md:p-6", {
               "last:hidden lg:last:block": hideLastItemOnMobile,
             })}
-            key={item.id}
           >
             <Card {...item} />
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   )
 }
 

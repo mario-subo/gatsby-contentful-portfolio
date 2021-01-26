@@ -20,18 +20,20 @@ const Footer = () => {
   `)
 
   return (
-    <div className="container py-12 md:flex md:items-center md:justify-between">
-      <ul className="flex justify-center md:order-2">
-        <FooterLink
-          href={links.instagram}
-          icon={FaInstagram}
-          label="Instagram"
-        />
-      </ul>
-      <div className="mt-8 md:mt-0 md:order-1">
-        <p className="text-center text-sm md:text-base text-gray-700">
-          &copy; 2020 David Gituen Marcus. All rights reserved.
-        </p>
+    <div className="py-12 bg-gray-700">
+      <div className="container md:flex md:items-center md:justify-between">
+        <ul className="flex justify-center md:order-2">
+          <FooterLink
+            href={links.instagram}
+            icon={FaInstagram}
+            label="Instagram"
+          />
+        </ul>
+        <div className="mt-8 md:mt-0 md:order-1">
+          <p className="text-center text-sm md:text-base text-gray-500">
+            &copy; 2020 David Gituen Marcus. All rights reserved.
+          </p>
+        </div>
       </div>
     </div>
   )

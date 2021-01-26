@@ -2,7 +2,7 @@
 @tailwind base;
 
 body {
-  @apply .bg-white .font-body .antialiased;
+  @apply .bg-gray-400 .font-body .antialiased;
 }
 
 @tailwind components;

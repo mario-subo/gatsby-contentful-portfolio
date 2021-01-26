@@ -8,7 +8,7 @@ const listContainerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: .2 }
+    transition: { staggerChildren: .3 }
   },
 }
 
@@ -19,9 +19,7 @@ const itemVariant = {
 
 const Cards = ({ items, hideLastItemOnMobile = false }) => {
   return (
-    <div
-      className="container"
-    >
+    <div className="container">
       <motion.div
         className="flex flex-wrap -mx-3 lg:-mx-6"
         variants={listContainerVariants}

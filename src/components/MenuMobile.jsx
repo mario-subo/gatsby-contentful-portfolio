@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import TransitionLink from "gatsby-plugin-transition-link"
 import { motion } from "framer-motion"
 import PropTypes from "prop-types"
 import React from "react"
@@ -36,14 +36,16 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               key={`menu_mobile_link${key}`}
               variants={menuItem}
             >
-              <Link
+              <TransitionLink
+                entry={{ length: .3 }}
+                exit={{ length: .3 }}
                 className="font-semibold text-4xl text-white"
                 activeClassName="text-blue-500"
                 to={link.to}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </Link>
+              </TransitionLink>
             </motion.li>
           ))}
         </ul>

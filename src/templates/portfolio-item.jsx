@@ -30,6 +30,21 @@ export default props => {
     url,
   } = props.data.item
 
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (typeof window !== "undefined" && !!props?.data?.item) {
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        })
+
+      }
+    }, 600)
+    return () => clearTimeout(timeout)
+  }, [props?.data?.item])
+
   return (
     <Layout>
       <SiteMetadata
@@ -37,16 +52,16 @@ export default props => {
         description={summary}
         image={thumbnail.localFile.publicURL}
       />
-      <div className="bg-gray-0 py-12 lg:py-16">
+      <div className="bg-white py-12 lg:py-16">
         <div className="container">
           <div className="flex flex-wrap">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={variantsGallery}
-            transition={{ duration: .8 }}
-            className="w-full lg:w-2/3 pb-8"
-          >
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={variantsGallery}
+              transition={{ duration: .8 }}
+              className="w-full lg:w-2/3 pb-8"
+            >
               {gallery && gallery.length === 1 && (
                 <Img
                   fluid={gallery[0].localFile.childImageSharp.fluid}
@@ -83,7 +98,7 @@ export default props => {
         </div>
       </div>
       {related && (
-        <div className="bg-gray-100 py-12 lg:py-16">
+        <div className="bg-gray-200 bg-custom-stripes bg-fixed py-12 lg:py-16">
           <div className="container">
             <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-gray-900 mb-8">
               Related projects

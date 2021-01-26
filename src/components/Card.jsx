@@ -1,8 +1,9 @@
 import { motion } from "framer-motion"
 import Img from "gatsby-image"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import TransitionLink from "gatsby-plugin-transition-link"
 
 const Card = props => {
   const { name, slug, summary, thumbnail } = props
@@ -13,7 +14,12 @@ const Card = props => {
       whileHover={{ y: -5 }}
       whileTap={{ y: 0 }}
     >
-      <Link to={`/${slug}`}>
+      <TransitionLink
+        entry={{ length: .3 }}
+        exit={{ length: .3 }}
+        to={`/${slug}`}
+        preventScrollJump
+      >
         <div className="group-hover:opacity-75 transition duration-150 ease-in-out">
           <Img fluid={thumbnail.localFile.childImageSharp.fluid} alt={name} />
         </div>
@@ -21,7 +27,7 @@ const Card = props => {
           <h1 className="sm:text-lg text-gray-900 font-semibold">{name}</h1>
           <p className="text-sm sm:text-base text-gray-700">{summary}</p>
         </div>
-      </Link>
+      </TransitionLink>
     </motion.div>
   )
 }
